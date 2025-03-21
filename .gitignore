@@ -172,3 +172,11 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
+
+
+cats_and_dogs/
+fruits-small/
+
+
+
+
