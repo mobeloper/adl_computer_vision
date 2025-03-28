@@ -177,6 +177,12 @@ cython_debug/
 cats_and_dogs/
 fruits-small/
 
+*/images.tar.gz
+*/annotations.tar.gz
 
 
+annotations/
+images/
 
+yolov5/
+CustomYOLOModelTraining/catDogDataForYoloPractice/
