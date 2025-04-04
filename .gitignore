@@ -186,3 +186,6 @@ images/
 
 yolov5/
 CustomYOLOModelTraining/catDogDataForYoloPractice/
+
+fruits-small.*
+*/data/
