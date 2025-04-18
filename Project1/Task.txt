@@ -1,0 +1,3 @@
+Create a model using scikitlearn to predict the profit of the company based on company's spending pattern and company's location using ML technique and ANN model.
+
+Create a test app using python streamlit to take relevant user input and get the prediction from the trained model.
