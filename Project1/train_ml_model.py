@@ -18,6 +18,7 @@ from sklearn.pipeline import Pipeline
 from sklearn.compose import ColumnTransformer
 from sklearn.preprocessing import StandardScaler, OneHotEncoder
 from sklearn.ensemble import RandomForestRegressor
+from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
 
 
@@ -68,7 +69,7 @@ preprocessor = ColumnTransformer([
 #     ('regressor', RandomForestRegressor(n_estimators=100, random_state=42))
 # ])
 model = RandomForestRegressor(n_estimators=num_estimators, random_state=42)
-
+# model = LinearRegression()
 
 X_train_processed = preprocessor.fit_transform(X_train)
 X_test_processed = preprocessor.transform(X_test)
@@ -82,6 +83,10 @@ model.fit(X_train_processed, y_train)
 # 6. Predict and evaluate
 # y_pred = model.predict(X_test)
 y_pred = model.predict(X_test_processed)
+
+
+print(f"Train score: {model.score(X_train_processed,y_train)}")
+print(f"Test score: {model.score(X_test_processed,y_test)}")
 
 mae = mean_absolute_error(y_test, y_pred)
 mse = mean_squared_error(y_test, y_pred)
